@@ -18,7 +18,7 @@
                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 </div>
                 <div>
-                    <input type="number" name="prix" step="0.01" placeholder="Prix (€)" 
+                    <input type="number" name="prix" step="0.01" placeholder="Prix (FCFA)" 
                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 </div>
                 <button type="submit" name="ajouter" 
@@ -51,7 +51,7 @@
                 <div class='bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 group'>
                     <div class='flex justify-between items-center'>
                         <h2 class='text-xl font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300'>" . htmlspecialchars($produit['nom']) . "</h2>
-                        <span class='text-lg font-medium text-green-600'>" . number_format($produit['prix'], 2) . " €</span>
+                        <span class='text-lg font-medium text-green-600'>" . number_format($produit['prix'], 2) . " FCFA</span>
                     </div>
                     <div class='mt-4 flex justify-end'>
                         <button onclick='deleteProduit(" . $produit['id'] . ")' 
