@@ -14,11 +14,11 @@
             <h1 class="text-2xl font-bold text-gray-800 mb-6">Ajouter un produit</h1>
             <form method="POST" action="" class="space-y-4">
                 <div>
-                    <input type="text" name="nom" placeholder="Nom du produit" 
+                    <input required type="text" name="nom" placeholder="Nom du produit" 
                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 </div>
                 <div>
-                    <input type="number" name="prix" step="0.01" placeholder="Prix (FCFA)" 
+                    <input required type="number" name="prix" step="0.01" placeholder="Prix (FCFA)" 
                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 </div>
                 <button type="submit" name="ajouter" 
