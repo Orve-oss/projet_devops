@@ -1,9 +1,13 @@
 # Utiliser l'image officielle PHP avec Apache
 FROM php:8.2-apache
 
-# Installer les extensions nécessaires
-# RUN docker-php-ext-install pdo pdo_mysql mysqli
-RUN apt-get update && apt-get install -y libpq-dev && docker-php-ext-install pdo pdo_pgsql pgsql
+# Mettre à jour apt et installer les dépendances nécessaires
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Installer les extensions PHP pour PostgreSQL
+RUN docker-php-ext-install pdo pdo_pgsql pgsql
 
 # Activer mod_rewrite pour Apache
 RUN a2enmod rewrite
